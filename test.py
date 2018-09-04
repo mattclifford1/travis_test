@@ -1,3 +1,5 @@
+import numpy as np
+
 def inc(x):
     return x + 1
 
