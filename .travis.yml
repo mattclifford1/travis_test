@@ -8,15 +8,15 @@ install:
 #  - pip install -r requirements.txt #if all requirments in txt file
 #  - pip install numpy
 #  - pip install scipy
-  -pip install codecov
+#  - pip install codecov
 # command to run tests
-virtualenv:
-  system_site_packages: true
+#virtualenv:
+#  system_site_packages: true
 script:
-  - coverage run test.py
+  - python test.py
 
-after_success:
-  - codecov
+#after_success:
+#  - codecov
 
-env:
-  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
+#env:
+#  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
