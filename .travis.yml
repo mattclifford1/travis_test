@@ -3,10 +3,14 @@ sudo: false
 language: python
 python:
   - "2.7"
- # - "3.6"
+#  - "3.6"
+#  - "3.7"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
 
 install:
   - pip install codecov
+
+#virtualenv:
+#  system_site_packages: true
 
 env:
   - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
@@ -16,3 +20,4 @@ script:
 
 after_success:
   - codecov
+
