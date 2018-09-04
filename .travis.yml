@@ -13,3 +13,5 @@ virtualenv:
   system_site_packages: true
 script:
   - pytest test.py
+
+CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
