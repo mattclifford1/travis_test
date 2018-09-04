@@ -9,6 +9,8 @@ python:
 install:
   - pip install codecov
 
+env:
+  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
 script:
   - coverage run test.py
 
