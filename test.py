@@ -10,4 +10,6 @@ def test_this():
     assert times(1, 2) == 2
     assert times(1, 4) == 4
     assert inc(1) == 2
-    
+
+if __name__ == '__main__':
+	test_this()
