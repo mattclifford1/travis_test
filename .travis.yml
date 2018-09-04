@@ -3,8 +3,8 @@ sudo: false
 language: python
 python:
   - "2.7"
-#  - "3.6"
-#  - "3.7"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
+  - "3.6"
+  # - "3.7"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
 
 install:
   - pip install codecov
