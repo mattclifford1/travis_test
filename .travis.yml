@@ -12,19 +12,19 @@ notifications:
 install:
   - pip install codecov
   - pip install pytest
-  # - pip install pytest pytest-cov
+  - pip install pytest pytest-cov
+
 #virtualenv:
 #  system_site_packages: true
 
 env:
-  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
+  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"  #get token from https://codecov.io/
 
 script:
-  # - py.test --cov-report xml 
-  - pytest
+  - py.test --cov-report xml 
   - coverage run test_script.py
 
 after_success:
   - codecov   # go to https://codecov.io/ to see report (have to log in with github)
-  #- codecov -t the-repository-upload-token #for private repository
+  #- codecov -t the_repository_upload_token #for private repository
   
