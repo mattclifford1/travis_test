@@ -1,4 +1,3 @@
 [
-  "test_script.py::test_pass",
-  "test_script.py::test_fail"
+  "package_name/test_script.py::test_pass"
 ]
