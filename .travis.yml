@@ -17,7 +17,7 @@ env:
 
 script:
   # - pytest 
-  - coverage run test.py
+  - coverage run test_script.py
 
 after_success:
   - codecov   # go to https://codecov.io/ to see report (have to log in with github)
