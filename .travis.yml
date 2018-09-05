@@ -12,7 +12,7 @@ notifications:
 install:
   - pip install codecov
   - pip install pytest
-  - pip install pytest pytest-cov
+  # - pip install pytest pytest-cov
 #virtualenv:
 #  system_site_packages: true
 
@@ -20,7 +20,8 @@ env:
   - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"
 
 script:
-  - py.test --cov-report xml 
+  # - py.test --cov-report xml 
+  - pytest
   - coverage run test_script.py
 
 after_success:
