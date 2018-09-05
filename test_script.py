@@ -6,3 +6,10 @@ def test_pass():
 
 # def test_fail():
 # 	assert times(1, 2) == 3
+
+def main():
+	test_pass()
+
+#test coverage
+if __name__ == '__main__':
+	main()
