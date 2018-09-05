@@ -1,3 +1,4 @@
 {
-  "test.py::test_this": true
+  "test.py::test_this": true,
+  "test_script.py::test_fail": true
 }
