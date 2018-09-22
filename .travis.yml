@@ -13,7 +13,7 @@ matrix:
           env: TOXENV=py32
         - os: linux
           sudo: required
-          python: 3.7
+          python: 3.7-dev
           env: TOXENV=py37
 
 notifications:
