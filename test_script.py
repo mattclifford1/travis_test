@@ -11,9 +11,9 @@ def test_pass():
     assert times(1, 2) == 2
 
 
-def test_fail():
-   ''' designed to fail '''
-  assert times(1, 2) == 3
+# def test_fail():
+#    ''' designed to fail '''
+#   assert times(1, 2) == 3
 
 
 def main():
