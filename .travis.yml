@@ -1,20 +1,10 @@
 sudo: false
 
 language: python
-# python:
-#   - "2.7"
-#   - "3.6"
-#   # - "3.7"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
-matrix:
-    include:
-        - os: linux
-          sudo: required
-          python: 3.2
-          env: TOXENV=py32
-        - os: linux
-          sudo: required
-          python: 3.7-dev
-          env: TOXENV=py37
+python:
+  - "2.7"
+  - "3.6"
+  - "3.7-dev"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
 
 notifications:
   email: never
@@ -24,9 +14,6 @@ install:
   - pip install pytest
   - pip install pytest pytest-cov
   - pip install pylint
-
-#virtualenv:
-#  system_site_packages: true
 
 env:
   - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"  #get token from https://codecov.io/
