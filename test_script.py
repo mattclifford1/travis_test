@@ -1,7 +1,7 @@
 ''' script for testing purposes '''
 
 
-def times(x, y_2):
+def times(x_1, y_2):
     ''' times together '''
     return x_1*y_2
 
