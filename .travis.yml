@@ -13,6 +13,7 @@ install:
   - pip install codecov
   - pip install pytest
   - pip install pytest pytest-cov
+  - pip install pylint
 
 #virtualenv:
 #  system_site_packages: true
@@ -23,6 +24,7 @@ env:
 script:
   - py.test --cov-report xml 
   - coverage run test_script.py
+  - pylint test_script.py
 
 after_success:
   - codecov   # go to https://codecov.io/ to see report (have to log in with github)
