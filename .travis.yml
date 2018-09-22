@@ -4,7 +4,7 @@ language: python
 python:
   - "2.7"
   - "3.6"
-  - "3.7-dev"  fails build 'Unable to download 3.7 archive. The archive may not exist.''
+  - "3.7-dev"
 
 notifications:
   email: never
