@@ -1,0 +1,4 @@
+[flake8]
+ignore = E123 E124, E226
+exclude = test.py
+max-line-length = 120
