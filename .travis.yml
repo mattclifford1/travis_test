@@ -20,7 +20,7 @@ env:
   - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"  #get token from https://codecov.io/
 
 script:
-  - py.test --cov-report xml 
+  - pytest
   - coverage run package/*.py
   - pylint package/*.py
   - flake8 package/*.py
