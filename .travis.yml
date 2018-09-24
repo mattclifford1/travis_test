@@ -21,7 +21,7 @@ env:
 
 script:
   - py.test --cov-report xml 
-  - coverage run 
+  - coverage run package/*
   - pylint package/
   - flake8 package/
 
