@@ -19,6 +19,7 @@ def test_pass():
 def main():
     ''' run fucntions '''
     test_pass()
+    x = 1 # 
 
 
 # test coverage

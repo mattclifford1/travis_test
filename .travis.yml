@@ -21,9 +21,9 @@ env:
 
 script:
   - py.test --cov-report xml 
-  - coverage run test_script.py
-  - pylint test_script.py
-  - flake8 test_script.py
+  - coverage run package/
+  - pylint package/
+  - flake8 package/
 
 after_success:
   - codecov   # go to https://codecov.io/ to see report (have to log in with github)
