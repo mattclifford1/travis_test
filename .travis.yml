@@ -16,7 +16,7 @@ env:
   - make token
 
 script:
-  - make all
+  - make tests
 
 after_success:
   - codecov

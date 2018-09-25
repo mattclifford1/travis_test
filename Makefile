@@ -1,20 +1,12 @@
-all:
-	pytest
-	pylint package/
-	flake8 package/
-	# pytest --cov=./
-
 install:
 	pip install -r requirements.txt
-
-coverage:
-	coverage run package/*.py
 
 lint:
 	pylint package/
 	flake8 package/
 
 tests:
+	# pytest
 	pylint package/
 	flake8 package/
 	pytest --cov=./
