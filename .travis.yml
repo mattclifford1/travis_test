@@ -2,7 +2,7 @@ sudo: false
 
 language: python
 python:
-  - "2.7"
+  # - "2.7"
   - "3.6"
   - "3.7-dev"
 
@@ -13,12 +13,14 @@ install:
   - make install
 
 env:
-  - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"  #get token from https://codecov.io/
+  - make token
 
 script:
   - make all
 
 after_success:
-  - codecov   # go to https://codecov.io/ to see report (have to log in with github)
-  #- codecov -t the_repository_upload_token #for private repository
+  make codecov-public
+
+  # - codecov   # go to https://codecov.io/ to see report (have to log in with github)
+  # #- codecov -t the_repository_upload_token #for private repository
   
