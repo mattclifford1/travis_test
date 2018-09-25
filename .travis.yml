@@ -10,21 +10,13 @@ notifications:
   email: never
 
 install:
-  # - pip install codecov
-  # - pip install pytest
-  # # - pip install pytest pytest-cov
-  # - pip install pylint
-  # - pip install flake8
-  - pip install -r requirements.txt
+  - make install
 
 env:
   - CODECOV_TOKEN="754ec358-2c9e-4f15-8123-b44041c1f09b"  #get token from https://codecov.io/
 
 script:
-  - pytest
-  - coverage run package/*.py
-  - pylint package/*.py
-  - flake8 package/*.py
+  - make all
 
 after_success:
   - codecov   # go to https://codecov.io/ to see report (have to log in with github)
