@@ -1,5 +1,3 @@
 [
-  "package/compat/test_script2.py::test_myoutput",
-  "package/compat/test_script2.py::test_division",
   "package/test/test_script.py::test_pass"
 ]

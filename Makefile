@@ -1,6 +1,5 @@
 all:
 	pytest
-	coverage run package/*.py
 	pylint package/
 	flake8 package/
 	pytest --cov=./
