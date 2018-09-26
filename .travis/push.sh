@@ -12,7 +12,7 @@ commit_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://$1@github.com/mattclifford1/travis_test.git
+  git remote add origin-pages https://mattclifford1:$1@github.com/mattclifford1/travis_test.git
   git push origin master 
 }
 
