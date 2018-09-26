@@ -19,7 +19,7 @@ after_success:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: "$GH_TOKEN"
+  github-token: $GH
   file: save.npy
   keep-history: true
   on:
