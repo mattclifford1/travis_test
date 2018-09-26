@@ -1,35 +1,26 @@
 sudo: false
-
 language: python
 python:
-  # - "2.7"
-  - "3.6"
-  - "3.7-dev"
-
+- '3.6'
+- 3.7-dev
 notifications:
   email: never
-
 install:
-  - make install
-
+- make install
 env:
+  matrix:
   - make token
-
+  global:
+    secure: K5RECFENuZSnSgTEOwaTUr4ukJSSM2erVEU6U9tKjUDfRvzS6YiyBAte9DGl35HrRtDQQjgsVSealnxuKLcMqkP9qKAhRiXAdFCQAKJeH7BhPNvdXdh5Vs5tqjr2Y6op5HCUkwsLsEOgQgZjAG2kXoSyyVVG/U5VRWXCXMDkR+6NzxcM2Bbc6hWLg7hvtnb8FT9hz52nxaORbfXDqLY/lnDeiihLcqc6hx1HTrEwgKeJb7eSPPlyDjfkSar9urJw6LPMF1L05Z7jAo790qUc054i2iyGA/mR5wsvhoPogZL1GM/Ey+QTNgmkf8UePD6OEeE2XYN5Fl4u5nxpOMFdX3eCaZGlUUk5EFkj1hWXMjeKEtCPngFJRaqsxHdP9xkpuULXUwIYAPCODCfoT4+F19lselCyfljJnDRtyAhd3pXJ5DAY3aF1VlUWnWRprQ4hsskXYmIf2riheaoPq75gfg+YDVQL7zRLWIp6ppAzWayc+S+biHhUE3s56KQ6lVZTPG0IZVtvQMPMO3slcyd+Vq2XCgje4nsiJZG4JmfA9q+XHO0mloDHUY1pVlqCIq+0ctF1NoyjyaYnLaB8pwBkTFraoupHkluTtXpHpsto5wx5/Qm5PRwUnt9NNGouRGntFxWLeTIqrQxFHpyRAs7AoBBR4H6MQskJhwhBG/045B0=
 script:
-  # - make tests
-  - python save.py
-
+- python save.py
 after_success:
-  - codecov
-
-  # - codecov   # go to https://codecov.io/ to see report (have to log in with github)
-  # #- codecov -t the_repository_upload_token #for private repository
-  
+- codecov
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  file: 'save.npy'
+  github-token: "$GH_TOKEN"
+  file: save.npy
   keep-history: true
   on:
     branch: master
