@@ -16,7 +16,8 @@ env:
   - make token
 
 script:
-  - make tests
+  # - make tests
+  - python save.py
 
 after_success:
   - codecov
@@ -24,3 +25,11 @@ after_success:
   # - codecov   # go to https://codecov.io/ to see report (have to log in with github)
   # #- codecov -t the_repository_upload_token #for private repository
   
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  file: 'save.npy'
+  keep-history: true
+  on:
+    branch: master
