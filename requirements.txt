@@ -2,4 +2,3 @@ codecov
 pytest
 pylint
 flake8
-pytest-cov

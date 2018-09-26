@@ -10,10 +10,11 @@ def test_pass():
     ''' designed to pass '''
     assert times(1, 2) == 2
 
-
+# leave this function commented out for CI to pass
+# only uncomment to test making the CI fail
 # def test_fail():
-#    ''' designed to fail '''
-#   assert times(1, 2) == 3
+#         ''' designed to fail '''
+#         assert times(1, 2) == 3
 
 
 def main():

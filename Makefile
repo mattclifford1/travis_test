@@ -9,7 +9,7 @@ tests:
 	# pytest
 	pylint package/
 	flake8 package/
-	pytest --cov=./
+	pytest --cov=./ --cov-report xml
 
 docs:
 	#get from alex

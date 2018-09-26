@@ -1,5 +1,8 @@
 [pylint]
-disable=W0511, C0321
+# ignore errors or warning (separate with , )
+disable =
+
 # can add more processes to jobs if performance speed up needed
 jobs=1 
+
 max-line-length=120
